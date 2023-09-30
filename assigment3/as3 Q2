@@ -1,0 +1,62 @@
+#include<iostream>
+using namespace std;
+
+class toolbooth
+{
+private:
+ unsigned int car;
+double totmoney;
+
+public:
+toolbooth()
+{
+this->car=0;
+this->totmoney=0;
+}
+void paying()
+{
+cout<<"paying car"<<endl; 
+  car++
+  totmoney=totmoney+1;
+}
+ void nonpaying()
+{
+   cout<<"non payinfg car" <<endl;
+   car++
+}
+void display(){
+ cout<<"number of cars "<<<car<endl;
+cout<<"total money of cars is"<<totmoney<<endl;
+}
+};
+
+int menu()
+{ 
+    toolbooth tb;
+    int choice;
+cout<<"enter choice "<<endl;
+cout<<"1.paying car"<<endl;
+cout<<"2.nonpaying car"<<endl;
+cout<<"3.show total number car"<<endl;
+cout<<"0.exit "<<endl;
+cin>>choice;
+while(choice!=0){
+switch(choice)
+{
+ case 1:
+ tb.paying(); 
+  break;
+  case 2:
+ tb.nonpaying();
+  break;
+  case 3:
+  tb.display();
+  break;
+  default:
+  cout<<"enter correct choice";
+
+
+
+}}
+return 0;
+}
