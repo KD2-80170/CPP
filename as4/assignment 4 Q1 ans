@@ -1,0 +1,80 @@
+#include<iostream>
+#include<stdio.h>
+using namespace std;
+class Time
+{
+    private:
+    int hour;
+    int minut;
+    int second;
+
+        public:
+        Time()
+        {
+        
+        }
+        Time(int h,int m,int s )
+        {
+          this->hour=h;
+          this->minut=m;
+          this->second=s;
+        }
+        void getHour()
+        { 
+        this->hour;
+        }
+        void getMinute()
+        {
+            this->minut;
+        }
+        void getSeconds()
+        {
+            this->second;
+        }
+        void printTime()
+        { 
+        cout<<"hours"<<' '<<hour<<"minut"<<" "<<minut<<"seconds"<<"  "<<second<<endl;
+        }
+        void setHour() 
+        {   cout<<"enter hour"<<endl;
+             cin>>hour;
+            this->hour=hour;
+        }
+        void setMinute(){
+            cout<<"enter minut"<<endl;
+            cin>>minut;
+            this->minut=minut;
+        }
+        void setSeconds(){
+            cout<<"enter second"<<endl;
+             cin>>second;
+            this->second=second;
+        }
+
+};
+
+int main()
+{   int h,m,s;
+    Time **arr = new Time *[3];
+
+      for (int i = 0; i < 3; i++)
+          arr[i] = new Time();
+       
+        for (int i = 0; i < 3; i++)
+        {
+        arr[i]->setHour();
+        arr[i]->setMinute();
+        arr[i]->setSeconds();
+        }
+
+        for(int i=0; i< 3;i++)
+        {
+                 arr[i]->printTime();
+        }
+
+     for (int i=0;i<3;i++)
+          delete arr[i] ;
+
+  delete arr;
+return 0;
+}
